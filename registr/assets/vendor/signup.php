@@ -1,4 +1,5 @@
 <?php
+     session_start();
      require_once 'connect.php';
      
       $full_name = $_POST['full_name'];
@@ -9,7 +10,8 @@
 
       if ($password === $password_confirm) {
      } else {
-        echo "Эта ", "строка ", "была ", "сделана", " из нескольких атов.";
+        $_SESSION['massage'] = 'пароли не совпадают';
+        
      }
    
    
