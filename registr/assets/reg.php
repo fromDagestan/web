@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,6 +29,9 @@
         <p>
            у вас усть аккаунт? - <a href="index.php">войдите</a>!
         </p>
+        <p class="msg">
+          <?= $_SESSION['massage'] ?>
+          </p>
     </form>
 </body>
 </html>
